@@ -1,0 +1,33 @@
+{
+    "name": "folderize",
+    "version": "0.0.1",
+    "description": "Require all files inside a folder, recursively or not.",
+    "keywords": [
+        "require",
+        "files",
+        "all",
+        "recursive",
+        "recursively",
+        "folder"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/cranic/node-folderize.git"
+    },
+    "author": "Cranic Tecnologia <contato@cranic.com.br>",
+    "contributors": [
+        "Alan Hoffmeister <alan@cranic.com.br>"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "mocha" : "1.8.x"
+    },
+    "main": "./lib/folderize",
+    "scripts" : {
+        "test" : "mocha -R spec"
+    },
+    "bugs": {
+        "url": "http://github.com/cranic/node-folderize/issues"
+    },
+    "license" : "MIT <http://opensource.org/licenses/MIT>"
+}
