@@ -1,5 +1,5 @@
 {
-    "name": "folderize",
+    "name": "requi",
     "version": "0.0.1",
     "description": "Require all files inside a folder, recursively or not.",
     "keywords": [
@@ -12,7 +12,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "http://github.com/cranic/node-folderize.git"
+        "url": "http://github.com/cranic/node-requi.git"
     },
     "author": "Cranic Tecnologia <contato@cranic.com.br>",
     "contributors": [
@@ -22,12 +22,12 @@
     "devDependencies": {
         "mocha" : "1.8.x"
     },
-    "main": "./lib/folderize",
+    "main": "./lib/requi",
     "scripts" : {
         "test" : "mocha -R spec"
     },
     "bugs": {
-        "url": "http://github.com/cranic/node-folderize/issues"
+        "url": "http://github.com/cranic/node-requi/issues"
     },
     "license" : "MIT <http://opensource.org/licenses/MIT>"
 }

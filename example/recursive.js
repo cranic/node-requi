@@ -6,9 +6,9 @@
  * @date 2013-01-30 19:18 GTM -3
  */
 
-var folderize = require('..');
+var requi = require('..');
 
-var required = folderize({
+var required = requi({
     'recursive' : true,
     'path' : __dirname + '/../test/dummy'
 });

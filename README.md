@@ -1,29 +1,29 @@
-# Folderize
+# Requi
 
 Lots of things to require from inside your script? That's not a problem anymore.
-Folderize is here to help you dinamically require scripts. You have the power to
+Requi is here to help you dinamically require scripts. You have the power to
 filter, blacklist, whitelist and even rename the scripts that you wan't to
 require.
 
 #### Installing
 
-With a simple `npm install --save folderize` you can start using it in your
+With a simple `npm install --save requi` you can start using it in your
 project.
 
 #### Using
 
-The use of Folderize is very straightforward and easy:
+The use of Requi is very straightforward and easy:
 
 ```js
-var folderize = require('folderize');
-var requirements = folderize({
+var requi = require('requi');
+var requirements = requi({
    path : '/path/to/files'
 });
 ```
 Or you can skip a variable creation by calling it directly after `require()`:
 
 ```js
-var requirements = require('folderize')({
+var requirements = require('requi')({
    path : '/path/to/files'
 });
 ```
@@ -39,10 +39,10 @@ Take this file tree as an example:
    - file_three.js
 ```
 
-You can require all files by calling Folderize:
+You can require all files by calling Requi:
 
 ```js
-var requirements = require('folderize')({
+var requirements = require('requi')({
    path : '/my/project/lib'
 });
 ```
@@ -59,4 +59,4 @@ Now your `requirements` whould be something like this:
 
 #### Options
 
-You can pass a list of options when calling Folderize, here is what every option do:
+You can pass a list of options when calling Requi, here is what every option do:

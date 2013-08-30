@@ -1,9 +1,9 @@
 var assert = require('assert');
-var folderize = require('..');
+var requi = require('..');
 
 describe('Main constructor', function(){
     it('Should be a function.', function(){
-        assert.equal(typeof folderize, 'function');
+        assert.equal(typeof requi, 'function');
     });
 });
 
@@ -17,7 +17,7 @@ describe('recursive option', function(){
             'level_two/level_three/file_five' : 'file_five.js'
         };
 
-        var required = folderize({
+        var required = requi({
             'path' : __dirname + '/dummy',
             'recursive' : true
         });
@@ -31,7 +31,7 @@ describe('recursive option', function(){
             file_one : 'file_one.js'
         };
 
-        var required = folderize({
+        var required = requi({
             'path' : __dirname + '/dummy',
             'recursive' : false
         });
@@ -47,7 +47,7 @@ describe('stripExtension option', function(){
             file_one : 'file_one.js'
         };
 
-        var required = folderize({
+        var required = requi({
             'path' : __dirname + '/dummy',
             'stripExtension' : true
         });
@@ -61,7 +61,7 @@ describe('stripExtension option', function(){
             'file_one.js' : 'file_one.js'
         };
 
-        var required = folderize({
+        var required = requi({
             'path' : __dirname + '/dummy',
             'stripExtension' : false
         });
@@ -76,7 +76,7 @@ describe('whiteList option', function(){
             file_two : { file_two: 'json' }
         };
 
-        var required = folderize({
+        var required = requi({
             'path' : __dirname + '/dummy',
             'whiteList' : /.json/
         });
@@ -91,7 +91,7 @@ describe('blackList option', function(){
             'file_one' : 'file_one.js'
         };
 
-        var required = folderize({
+        var required = requi({
             'path' : __dirname + '/dummy',
             'blackList' : /.json/
         });
@@ -106,7 +106,7 @@ describe('filter option', function(){
             file_two : { file_two: 'json' }
         };
 
-        var required = folderize({
+        var required = requi({
             'path' : __dirname + '/dummy',
             'filter' : function(name, path){
                 if(name.indexOf('file_one') === -1)
@@ -125,7 +125,7 @@ describe('rename option', function(){
             'rename_one' : 'file_one.js'
         };
 
-        var required = folderize({
+        var required = requi({
             'path' : __dirname + '/dummy',
             'rename' : function(name){
                 if(name === 'file_one')

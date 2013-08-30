@@ -1,5 +1,5 @@
 /* This is how we strip and/or rename the object keys that
- * folderize will return.
+ * requi will return.
  *
  * @author Alan Hoffmeister <contato@cranic.com.br>
  * @version 0.0.1
@@ -7,9 +7,9 @@
  * @date 2013-01-31 20:19 GTM -3
  */
 
-var folderize = require('..');
+var requi = require('..');
 
-var required = folderize({
+var required = requi({
     'path' : __dirname + '/../test/dummy',
     'stripExtension' : true, // It's true by default, now required[file_one.js] will be required[file_one]
     'rename' : function(name){
