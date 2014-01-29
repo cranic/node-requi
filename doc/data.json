@@ -1,0 +1,259 @@
+{
+    "project": {},
+    "files": {
+        "lib/cleanFiles.js": {
+            "name": "lib/cleanFiles.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Requi": 1
+            },
+            "namespaces": {}
+        },
+        "lib/filterFiles.js": {
+            "name": "lib/filterFiles.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Requi": 1
+            },
+            "namespaces": {}
+        },
+        "lib/findFiles.js": {
+            "name": "lib/findFiles.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Requi": 1
+            },
+            "namespaces": {}
+        },
+        "lib/requi.js": {
+            "name": "lib/requi.js",
+            "modules": {},
+            "classes": {
+                "Requi": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/requireFiles.js": {
+            "name": "lib/requireFiles.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Requi": 1
+            },
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Requi": {
+            "name": "Requi",
+            "shortname": "Requi",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "lib/requi.js",
+            "line": 6,
+            "description": "Main class",
+            "params": [
+                {
+                    "name": "opts",
+                    "description": "The configuration object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "engines",
+                            "description": "An object with the engines that can be used to require",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "whiteList",
+                            "description": "An Array whit the allowed extensions",
+                            "type": "Array"
+                        },
+                        {
+                            "name": "blackList",
+                            "description": "An Array whit the dennied extensions",
+                            "type": "Array"
+                        },
+                        {
+                            "name": "filter",
+                            "description": "A function used to allow or deny files",
+                            "type": "Function"
+                        },
+                        {
+                            "name": "rename",
+                            "description": "A function used to rename the files in the returned object",
+                            "type": "Function"
+                        },
+                        {
+                            "name": "recurcive",
+                            "description": "Allow or not to find files recursively",
+                            "type": "Boolean"
+                        },
+                        {
+                            "name": "clearPath",
+                            "description": "Allow or not to clear the path from the name",
+                            "type": "Boolean"
+                        },
+                        {
+                            "name": "clearExt",
+                            "description": "Allow or not to clear the extension from the name",
+                            "type": "Boolean"
+                        }
+                    ]
+                }
+            ],
+            "access": "public",
+            "tagname": "",
+            "return": {
+                "description": "An object with all files required.",
+                "type": "Object"
+            }
+        }
+    },
+    "classitems": [
+        {
+            "file": "lib/cleanFiles.js",
+            "line": 3,
+            "description": "Function used to clean the names in the required object",
+            "itemtype": "method",
+            "name": "cleanFiles",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "files",
+                    "description": "An array containing all names that have been required",
+                    "type": "Array"
+                },
+                {
+                    "name": "path",
+                    "description": "The original path from where the files come from",
+                    "type": "Array | String"
+                },
+                {
+                    "name": "rename",
+                    "description": "A function that can be used to rename the files",
+                    "type": "Function"
+                },
+                {
+                    "name": "clearPath",
+                    "description": "Allow or not to clean the path inside the names",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "clearExt",
+                    "description": "Allow or not to clean the extension inside the names",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "Requi"
+        },
+        {
+            "file": "lib/filterFiles.js",
+            "line": 3,
+            "description": "Private method used to filter files.",
+            "itemtype": "method",
+            "name": "filterFiles",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "files",
+                    "description": "An array with the paths to filter.",
+                    "type": "Array"
+                },
+                {
+                    "name": "filter",
+                    "description": "A function used to filter those paths.",
+                    "type": "Function"
+                },
+                {
+                    "name": "whiteList",
+                    "description": "An array containing the allowed extensions.",
+                    "type": "Array"
+                },
+                {
+                    "name": "blackList",
+                    "description": "An array containing the denied extensions.",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "An array with the filtered paths.",
+                "type": "Array"
+            },
+            "class": "Requi"
+        },
+        {
+            "file": "lib/findFiles.js",
+            "line": 4,
+            "description": "Private method used to find files within the given path.",
+            "itemtype": "method",
+            "name": "findFiles",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "A string or an array containing the path to search.",
+                    "type": "String | Array"
+                },
+                {
+                    "name": "recursive",
+                    "description": "If the search needs to be recusive or not.",
+                    "type": "Boolen"
+                }
+            ],
+            "return": {
+                "description": "An array with all files found.",
+                "type": "Array"
+            },
+            "class": "Requi"
+        },
+        {
+            "file": "lib/requi.js",
+            "line": 26,
+            "description": "This is the main configuration object, all default values should be\nlisted here",
+            "itemtype": "property",
+            "name": "options",
+            "access": "private",
+            "tagname": "",
+            "type": "{Object}",
+            "class": "Requi"
+        },
+        {
+            "file": "lib/requireFiles.js",
+            "line": 3,
+            "description": "Function used to require files based on engines and a list of paths.",
+            "itemtype": "method",
+            "name": "requireFiles",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "paths",
+                    "description": "An array with the paths to be required",
+                    "type": "Array"
+                },
+                {
+                    "name": "engines",
+                    "description": "An object with all engines used",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "An object with the required files",
+                "type": "Object"
+            },
+            "class": "Requi"
+        }
+    ],
+    "warnings": []
+}

@@ -1,33 +1,31 @@
 {
-    "name": "requi",
-    "version": "0.0.1",
-    "description": "Require all files inside a folder, recursively or not.",
-    "keywords": [
-        "require",
-        "files",
-        "all",
-        "recursive",
-        "recursively",
-        "folder"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/cranic/node-requi.git"
-    },
-    "author": "Cranic Tecnologia <contato@cranic.com.br>",
-    "contributors": [
-        "Alan Hoffmeister <alan@cranic.com.br>"
-    ],
-    "dependencies": {},
-    "devDependencies": {
-        "mocha" : "1.8.x"
-    },
-    "main": "./lib/requi",
-    "scripts" : {
-        "test" : "mocha -R spec"
-    },
-    "bugs": {
-        "url": "http://github.com/cranic/node-requi/issues"
-    },
-    "license" : "MIT <http://opensource.org/licenses/MIT>"
+  "name": "requi",
+  "version": "0.1.0",
+  "description": "Require multiple files over multiple directories.",
+  "main": "./lib/requi.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cranic/node-requi"
+  },
+  "keywords": [
+    "require",
+    "multiple",
+    "file",
+    "folder",
+    "recursive"
+  ],
+  "author": "Cranic Tenoclogia <contato@cranic.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cranic/node-requi/issues"
+  },
+  "homepage": "https://github.com/cranic/node-requi",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "yuidocjs": "~0.3.47"
+  }
 }
