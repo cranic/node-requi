@@ -70,6 +70,7 @@ the key name. Default: `true`
 * __clearExt__: A boolean that indicates if Requi should cut off the extension
 of the key name. Default: `true`
 
+
 ### License (MIT)
 
 The MIT License (MIT)
