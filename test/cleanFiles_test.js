@@ -28,7 +28,7 @@ describe('cleanFiles testing', function(){
 
         it('clearPath should work', function(){
             var result = cleanFiles(files, '/home/requi', null, true);
-            assert.equal(result[0], 'requi/index.js');
+            assert.equal(result[0], 'index.js');
         });
 
         it('clearExt should work', function(){

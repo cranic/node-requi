@@ -24,7 +24,7 @@ describe('Requi testing', function(){
 
         it('Calling Requi with an array as the path should not throw', function(){
             assert.doesNotThrow(function(){
-                requi([__dirname + '/../lib', __dirname + '/../example']);
+                requi([__dirname + '/../lib', __dirname + '/moch']);
             });
         });
     });

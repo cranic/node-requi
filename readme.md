@@ -18,6 +18,20 @@ var requi = require('requi');
 var allMyLibs = requi('./lib');
 ```
 
+Now image that the folder `lib` contains the fallowing structure:
+
+```
+- lib
+  - libA.js
+  - libB.js
+  - config.json
+```
+
+You are now able to acess your libraries inside the `allMyLibs` variables using
+`allMyLibs.libA`, or maybe `allMyLibs.config`, if you had a subfolder inside `lib`
+folder and you activated `recursive : true`, than you can access it like
+`allMyLibs['subfolder/otherLib']`.
+
 ### Custom Engines
 
 By default Requi only allow `.js` and `.json` files to be required, but you can
