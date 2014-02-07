@@ -114,8 +114,13 @@ module.exports = function(files, path, rename, clearPath, clearExt){
         if(clearPath)
             paths.forEach(function(path){
                 var norm = p.normalize(path);
-                if(file.indexOf(norm) === 0)
-                    file = _files[idx] = p.join(p.basename(norm), file.split(norm)[1]);
+                if(file.indexOf(norm) === 0){
+                    var newName = file.split(norm)[1];
+                    if(newName.charAt(0) == p.sep)
+                        newName = newName.substring(1);
+
+                    file = _files[idx] = newName;
+                }
             });
 
         if(clearExt){
